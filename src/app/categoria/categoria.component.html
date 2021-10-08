@@ -64,12 +64,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor='let item of listaCategorias'>
+          <tr *ngFor='let item of listaCategoria'>
             <th>{{item.id}}</th>
             <td>{{item.tipo}}</td>
             <td class="d-flex justify-content-end">
-              <button class="btn btn-info mr-3">Editar</button>
-              <button class="btn btn-danger">Deletar</button>
+              <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit', item.id]">Editar</button>
+              <button class="btn btn-danger" [routerLink]="['/categoria-delete', item.id]">Deletar</button>
             </td>
           </tr>
 

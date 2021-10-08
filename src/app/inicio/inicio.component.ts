@@ -15,13 +15,14 @@ import { ProdutosService } from '../service/produtos.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+
   categoria: Categoria = new Categoria()
   produtos: Produtos = new Produtos()
-  listaCategorias: Categoria[]
+  listaCategoria: Categoria[]
   idCategoria: number
   usuario: Usuario = new Usuario()
-idUsuario = environment.id
-listaProdutos: Produtos[]
+  idUsuario = environment.id
+  listaProdutos: Produtos[]
 
   constructor(
     private router: Router,
@@ -31,49 +32,53 @@ listaProdutos: Produtos[]
   ) { }
 
   ngOnInit() {
+    
     if (environment.token == '') {
       this.router.navigate(['/entrar'])
     }
+
     this.getAllCategorias()
     this.getAllProdutos()
   }
 
   getAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
-      this.listaCategorias = resp
+      this.listaCategoria = resp
     })
   }
-findByIdUsuario(){
-  this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+
+  findByIdUsuario(){
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
     this.usuario = resp
   })
 
   }
+
   findByIdCategoria() {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
-      this.categoria = resp
+    this.categoria = resp
     })
   }
-getAllProdutos(){
-  this.produtosService.getAllProdutos().subscribe((resp: Produtos[])=>{
-this.listaProdutos = resp
+
+  getAllProdutos(){
+    this.produtosService.getAllProdutos().subscribe((resp: Produtos[])=>{
+    this.listaProdutos = resp
   })
-}
+  }
 
   publicar() {
     this.categoria.id = this.idCategoria
     this.produtos.categoria = this.categoria
-this.usuario.id = this.idUsuario
-this.produtos.usuario = this.usuario
+    this.usuario.id = this.idUsuario
+    this.produtos.usuario = this.usuario
 
-this.produtosService.postProdutos(this.produtos).subscribe((resp: Produtos)=>{
-  this.produtos = resp
-  alert('Produto publicado!')
-  this.produtos = new Produtos()
-  this.getAllProdutos()
-} )
+    this.produtosService.postProdutos(this.produtos).subscribe((resp: Produtos)=>{
+    this.produtos = resp
+    alert('Produto cadastrado!')
+    this.produtos = new Produtos()
+    this.getAllProdutos()
+  })
   }
-
 
 }
 

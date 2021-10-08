@@ -9,43 +9,43 @@ import { CategoriaService } from '../service/categoria.service';
   templateUrl: './categoria.component.html',
   styleUrls: ['./categoria.component.css']
 })
+
 export class CategoriaComponent implements OnInit {
   categoria: Categoria = new Categoria()
-  listaCategorias: Categoria[]
- categoriaAtivo: boolean
+  listaCategoria: Categoria[]
+  categoriaAtivo: boolean
   
-  constructor(
-    private router: Router,
-    private categoriaService: CategoriaService
-    
-    
-  ) { }
+constructor(
+  private router: Router,
+  private categoriaService: CategoriaService
+      
+) { }
 
-  ngOnInit() {
-    if (environment.token == '') {
-      this.router.navigate(['/entrar'])
-    }
-    this.findAllCategorias()
+ngOnInit() {
+  if (environment.token == '') {
+    this.router.navigate(['/entrar'])
   }
-findAllCategorias(){
-  this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
-    this.listaCategorias = resp
+
+    this.findAllCategorias()
+}
+
+  findAllCategorias(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
+    this.listaCategoria = resp
   })
-}
-ativoCategoria(event: any){
-  this.categoriaAtivo  = event.target.value 
- console.log(this.categoriaAtivo)
- }
+  }
 
-cadastrar(){ 
-  this.categoria.ativo= this.categoriaAtivo
-  this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
+  ativoCategoria(event: any){
+    this.categoriaAtivo  = event.target.value 
+  }
+
+  cadastrar(){ 
+    this.categoria.ativo= this.categoriaAtivo
+    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
     this.categoria = resp
-  alert('Categoria cadastrada!')
-  this.findAllCategorias()
-  this.categoria = new Categoria()
- 
-})
-}
-
+    alert('Categoria cadastrada!')
+    this.findAllCategorias()
+    this.categoria = new Categoria()
+    })
+  }
 }
