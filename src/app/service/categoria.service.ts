@@ -18,16 +18,23 @@ export class CategoriaService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-getAllCategoria(): Observable<Categoria[]>{
-  return this.http.get<Categoria[]>('https://bluegeneration.herokuapp.com/categoria', this.token)
+  getAllCategoria(): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>('https://bluegeneration.herokuapp.com/categoria', this.token)
+  }
 
-}
-postCategoria(categoria: Categoria): Observable<Categoria>{
-  return this.http.post<Categoria>('https://bluegeneration.herokuapp.com/categoria', categoria, this.token)
+  postCategoria(categoria: Categoria): Observable<Categoria>{
+    return this.http.post<Categoria>('https://bluegeneration.herokuapp.com/categoria', categoria, this.token)
+  }
 
-}
-getByIdCategoria(id: number): Observable<Categoria> {
-  return this.http.get<Categoria>(`https://bluegeneration.herokuapp.com/categoria/${id}`, this.token)
+  getByIdCategoria(id: number): Observable<Categoria> {
+    return this.http.get<Categoria>(`https://bluegeneration.herokuapp.com/categoria/${id}`, this.token)
+  }
 
-}
+  putCategoria(categoria: Categoria): Observable<Categoria> {
+    return this.http.put<Categoria>('https://bluegeneration.herokuapp.com/categoria', categoria, this.token)
+  } 
+
+  deleteCategoria(id: number) {
+    return this.http.delete(`https://bluegeneration.herokuapp.com/categoria/${id}`, this.token)
+  }
 }
