@@ -2,3 +2,105 @@
 
 <a routerLink='/categoria'>CATEGORIA</a>
 
+<div class="text-secondary d-flex justify-content-center row mt-3 mb-5">
+    <div class="col-md-6">
+        <button class="btn btn-light mr-2" data-toggle="modal" data-target="#exampleModal">Novo Produto</button>
+    </div>
+</div>
+
+<h4 class="text-secondary d-flex justify-content-center">Produtinhos :)</h4>
+<br>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Produto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+
+        <div class="modal-body">
+            
+            <div class="form-group">
+                <label for="titulo">Nome</label>
+                <input [(ngModel)]='produtos.nome' type="text" class="form-control" id="titulo" placeholder="Digite o Título">
+            </div>
+
+            <div class="form-group">
+                <label for="texto">Descrição</label>
+                <textarea [(ngModel)]='produtos.descricao' class="form-control" name="texto" id="texto" rows="1"></textarea>
+            </div>
+
+            <!-- Não sei se muda algo por ser do tipo number -->
+
+            <div class="form-group">
+                <label for="texto">Preço</label>
+                <textarea [(ngModel)]='produtos.preco' class="form-control" name="texto" id="texto" rows="1"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="texto">Quantidade</label>
+                <textarea [(ngModel)]='produtos.quantidade' class="form-control" name="texto" id="texto" rows="1"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="texto">Escolha uma categoria ou <a data-dismiss="modal" routerLink='/categoria'>cadastre uma nova</a>:</label>
+
+                <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
+                    <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.tipo}}</option>
+                </select>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)='publicar()'>Cadastrar</button>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+<div class="card-columns">
+<div class="row">
+    <div class="col-md-12">
+    <div class="card" *ngFor='let item of listaProdutos'>
+        <div class="card-body">
+        <h5 class="card-title">Nome: {{item.nome}}</h5>
+        <p class="card-text">Descrição: {{item.descricao}}</p>
+        <p class="card-text">Preço: R${{item.preco}}</p>
+        <p class="card-text">Quantidade: {{item.quantidade}}</p>
+        <p class="card-text">Categoria: {{item.categoria.tipo}}</p>
+        <p class="card-text">Criado por: {{item.usuario.nome}}</p>
+        <a [routerLink]="['/produtos-edit', item.id]" href="#" class="btn btn-primary mr-3">Editar</a>
+        <a [routerLink]="['/produtos-delete', item.id]" href="#" class="btn btn-outline-danger">Apagar</a>
+        </div>
+    </div>
+    </div>
+</div>
+
+</div>
+
+<div class="card-columns">
+    <div class="row">
+        <div class="col-md-12">
+        <div class="card" *ngFor='let item of usuario.produtos'>
+            <div class="card-body">
+            <h5 class="card-title">Nome: {{item.nome}}</h5>
+            <p class="card-text">Descrição: {{item.descricao}}</p>
+            <p class="card-text">Preço: R${{item.preco}}</p>
+            <p class="card-text">Quantidade: {{item.quantidade}}</p>
+            <p class="card-text">Categoria: {{item.categoria.tipo}}</p>
+            <p class="card-text">Criado por: {{item.usuario.nome}}</p>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </div>

@@ -14,6 +14,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
+import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +33,12 @@ import { CategoriaComponent } from './categoria/categoria.component';
     CadastrarComponent,
     InicioComponent,
     CategoriaComponent,
+    ProdutosEditComponent,
+    ProdutosDeleteComponent,
+    CategoriaEditComponent,
+    CategoriaDeleteComponent,
+    UsuarioEditComponent,
+    CarrinhoComponent,
   ],
   imports: [
     BrowserModule,
