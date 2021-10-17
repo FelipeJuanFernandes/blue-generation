@@ -7,7 +7,6 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreComponent } from './sobre/sobre.component';
-import { ContatoComponent } from './contato/contato.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +19,7 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,6 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     RodapeComponent,
     ProdutosComponent,
     SobreComponent,
-    ContatoComponent,
     EntrarComponent,
     CadastrarComponent,
     InicioComponent,
@@ -39,6 +38,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     CategoriaDeleteComponent,
     UsuarioEditComponent,
     CarrinhoComponent,
+    ProdutoComponent,
   ],
   imports: [
     BrowserModule,
