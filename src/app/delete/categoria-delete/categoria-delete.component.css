@@ -2,7 +2,6 @@
 
 body {
     font-family: "Raleway", sans-serif;
-
 }
 
 .font-color1 {
@@ -26,14 +25,12 @@ body {
     border: 1.8px solid #b12a5b;
     text-align: center;
     text-transform: uppercase;
-    font-style: bold
-    
+    font-style: bold;
 }
 
 .btn-cancel:hover {
     animation: opacity 3s;
     opacity: 60%;
-    
 }
 
 .btn:hover {
@@ -44,7 +41,6 @@ body {
 .btn-cadastrar:hover {
     animation: opacity 3s;
     opacity: 60%;
-    
 }
 
 .btn-cadastrar {
@@ -59,5 +55,4 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-style: bold;
-    
-    }
+}

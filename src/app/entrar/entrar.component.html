@@ -13,22 +13,18 @@
                 </li>
             </ul>
             <label for="login-input-user" class="login__label">
-              <!--  <input  class="form-control" type="text" name="usuario"  placeholder="Seu usuário">--->
-               Usuário
+                <!--  <input  class="form-control" type="text" name="usuario"  placeholder="Seu usuário">--->
+                Usuário
             </label>
             <input [(ngModel)]='usuarioLogin.usuario' id="usuario" class="login__input" type="text" name="usuario" />
             <label for="login-input-password" class="login__label">
-       Senha
+                Senha
             </label>
-            <input [(ngModel)]='usuarioLogin.senha' id="senha" class="login__input" type="password"  name="senha" />
-           <!-- <input id="login-input-password" class="login__input" type="password" />-->
-           
+            <input [(ngModel)]='usuarioLogin.senha' id="senha" class="login__input" type="password" name="senha" />
+            <!-- <input id="login-input-password" class="login__input" type="password" />-->
+
             <button class="login__submit" (click)='entrar()'>Entrar</button>
         </form>
-        
     </div>
-
-
 </body>
 </html>
-
