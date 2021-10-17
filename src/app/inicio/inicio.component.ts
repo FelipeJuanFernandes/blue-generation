@@ -12,73 +12,75 @@ import { ProdutosService } from '../service/produtos.service';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  styleUrls: ['./inicio.component.css'],
 })
-export class InicioComponent implements OnInit {
 
-  categoria: Categoria = new Categoria()
-  produtos: Produtos = new Produtos()
-  listaCategoria: Categoria[]
-  idCategoria: number
-  usuario: Usuario = new Usuario()
-  idUsuario = environment.id
-  listaProdutos: Produtos[]
+export class InicioComponent implements OnInit {
+  categoria: Categoria = new Categoria();
+  produtos: Produtos = new Produtos();
+  listaCategoria: Categoria[];
+  idCategoria: number;
+  usuario: Usuario = new Usuario();
+  idUsuario = environment.id;
+  listaProdutos: Produtos[];
 
   constructor(
     private router: Router,
     private produtosService: ProdutosService,
     private categoriaService: CategoriaService,
     private authService: AuthService
-  ) { }
+  ) {}
 
   ngOnInit() {
-    
     if (environment.token == '') {
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/entrar']);
     }
 
-    this.getAllCategorias()
-    this.getAllProdutos()
+    this.getAllCategorias();
+    this.getAllProdutos();
   }
 
   getAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
-      this.listaCategoria = resp
-    })
+      this.listaCategoria = resp;
+    });
   }
 
-  findByIdUsuario(){
-    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
-    this.usuario = resp
-  })
-
+  findByIdUsuario() {
+    this.authService
+      .getByIdUsuario(this.idUsuario)
+      .subscribe((resp: Usuario) => {
+        this.usuario = resp;
+      });
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
-    this.categoria = resp
-    })
+    this.categoriaService
+      .getByIdCategoria(this.idCategoria)
+      .subscribe((resp: Categoria) => {
+        this.categoria = resp;
+      });
   }
 
-  getAllProdutos(){
-    this.produtosService.getAllProdutos().subscribe((resp: Produtos[])=>{
-    this.listaProdutos = resp
-  })
+  getAllProdutos() {
+    this.produtosService.getAllProdutos().subscribe((resp: Produtos[]) => {
+      this.listaProdutos = resp;
+    });
   }
 
   publicar() {
-    this.categoria.id = this.idCategoria
-    this.produtos.categoria = this.categoria
-    this.usuario.id = this.idUsuario
-    this.produtos.usuario = this.usuario
+    this.categoria.id = this.idCategoria;
+    this.produtos.categoria = this.categoria;
+    this.usuario.id = this.idUsuario;
+    this.produtos.usuario = this.usuario;
 
-    this.produtosService.postProdutos(this.produtos).subscribe((resp: Produtos)=>{
-    this.produtos = resp
-    alert('Produto cadastrado!')
-    this.produtos = new Produtos()
-    this.getAllProdutos()
-  })
+    this.produtosService
+      .postProdutos(this.produtos)
+      .subscribe((resp: Produtos) => {
+        this.produtos = resp;
+        alert('Produto cadastrado!');
+        this.produtos = new Produtos();
+        this.getAllProdutos();
+      });
   }
-
 }
-

@@ -1,3 +1,7 @@
+.navbar{
+    background-color: aqua;
+}
+
 .logo{
     width: 300px;
     transform: scale(1);
