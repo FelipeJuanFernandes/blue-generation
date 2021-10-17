@@ -1,21 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<div class="d-flex justify-content-center">
-<a class="mr-3" routerLink='/categoria'>CATEGORIA</a>
-<a class="mr-3" routerLink='/produtos'>PRODUTOS</a>
-<a class="mr-3" routerLink='/sobre'>SOBRE NÓS</a>
-<a class="mr-3"  routerLink='/carrinho'>CHECKOUT</a>
-<a class="mr-3"  routerLink='/produto'>Editar Produto</a>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>BlueGeneration</title>
+</head>
+
+<body>
+    
+
+<div>
+    <video class="video" width="1270vw" autoplay loop muted>
+      <span class="texto-video">Blue Generation</span>
+      <source src="../assets/blugeneration2.mp4" type="video/mp4">
+    </video>
 </div>
+  
+
+<!-- Destaques -->
+  <section>
+
+    <div class="middle mt-3">
+      <hr>
+      <h1 class="title-dest">Produtos em Destaques</h1>
+      <hr>
+    </div>
 
 
-<!-- Felipe, sua parte está aqui
+    <div class="gallery">
+      <div class="textfield large">
+        <div class="photoframe" style="background-image: url('../assets/nJ2Ic38.jpg')" href="#"></div>
+        <figcaption>Itens Pessoais</figcaption>
+      </div>
 
--> Não esqueça de colocar a navbar no componente menu
+      <div class="textfield small">
+        <div class="photoframe" style="background-image: url('../assets/bolsa.jpeg')" href="#"></div>
+        <figcaption>Eco Bag</figcaption>
+      </div>
 
--> Footer no componente rodapé
+      <div class="textfield small">
+        <div class="photoframe" style="background-image: url('../assets/canudometal1.png')" href="#"></div>
+        <figcaption>Canudos</figcaption>
+      </div>
 
-Colocar titulo Inicio na página
+      <div class="textfield medium">
+        <div class="photoframe" style="background-image: url('../assets/canudo.jpg')" href="#"></div>
+        <figcaption>Itens Pessoais</figcaption>
+      </div>
 
-As rotas estão logo acima!
+      <div class="textfield medium">
+        <div class="photoframe" style="background-image: url('../assets/kitviagem.jpeg')" href="#"></div>
+        <figcaption>Kit Viagem</figcaption>
+      </div>
+    </div>
+  </section>
 
-Boa sorte amigo! -->
+
+  <div>
+    <div class="middle mt-3">
+      <hr>
+      <h1 class="title-dest">Inovação em sustentabilidade</h1>
+      <hr>
+    </div>
+  </div>
+  
+
+  <!-- carrossel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="6s">
+        <img class="d-block w-100" src="../assets/canudopapel.jpeg" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 1s;">Produtos</h5>
+          <p class="animate__animated animate__bounceInLeft" style="animation-delay: 2s;">Já conhece nossos produtos?
+          </p>
+          <a href="#" class="btn animate__animated animate__zoomIn" style="animation-delay: 3s;">Veja mais</a>
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="6s">
+        <img class="d-block w-100" src="../assets/decoracao.jpeg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="animate__animated animate__zoomIn" style="animation-delay: 1s;">Produtos recicláveis</h5>
+          <p class="animate__animated animate__fadeInUp" style="animation-delay: 2s;">Pensando em um mundo mais sustentável</p>
+          <a href="#" class="btn animate__animated animate__zoomIn" style="animation-delay: 3s;">Veja mais</a>
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="6s">
+        <img class="d-block w-100" src="../assets/AdobeStock_439908023.jpeg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="animate__animated animate__flipInX" style="animation-delay: 1s;">Sobre nós</h5>
+          <p class="animate__animated animate__fadeInUp" style="animation-delay: 2s;">Conheça um pouco sobre nós</p>
+          <a href="#" class="btn animate__animated animate__zoomIn" style="animation-delay: 3s;">Veja mais</a>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- Paralax bonus -->
+
+  <div class="middle mt-3">
+    <hr>
+    <h1 class="title-dest">Fale conosco</h1>
+    <hr>
+  </div>
+
+  <div class="pimg2">
+    <div class="ptext">
+      <form>
+        <div class="form-group center">
+          <p class="description__p1 mb-4"> Envie seu e-mail e entraremos em contato</p>
+          <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"
+            placeholder="Seu email">
+        </div>
+        <div class="text-center mt-3 mb-5">
+          <button type="submit" class="btn mb-4 mt-3" data-toggle="modal" data-target="#modalExemplo">Enviar<i
+              aria-hidden="true"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="exampleModalLabel">E-mail enviado com sucesso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-dark">
+          Em breve nossa equipe entrará em contato!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Footer -->
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>Sobre</h6>
+        <p class="text-justify">Projeto final do bootcamp Generation Brasil, utilizando de tcnicas de programação, soft skills, metodologias ágeis, desenvolvemos esta aplicação</p>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Tecnologias usadas</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/category/c-language/">Java</a></li>
+          <li><a href="http://scanfcode.com/category/front-end-development/">Spring</a></li>
+          <li><a href="http://scanfcode.com/category/back-end-development/">MySql</a></li>
+          <li><a href="http://scanfcode.com/category/java-programming-language/">JavaScript</a></li>
+          <li><a href="http://scanfcode.com/category/android/">Bootstrap</a></li>
+          <li><a href="http://scanfcode.com/category/templates/">Angular</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Links</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">Home</a></li>
+          <li><a href="http://scanfcode.com/contact/">Produtos</a></li>
+          <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Sobre</a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2021 Todos direitos reservados a Blue Generation
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fab fa-github"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+</body>
+</html>
