@@ -1,81 +1,83 @@
-<div class="container-fluid">
-
-    <div class="row">
-
-        <div class="col-md-6" id='img-bg'></div>
-
-        <div class="col-md-6 mt-5 mb-5">
-
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-10">
-        
-                    <h1 class="text-center">Cadastro</h1>
-        
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+    <div class="form_wrapper">
+        <div class="form_container">
+          <div class="title_container">
+            <h2>Cadastro</h2>
+          </div>
+          
+           <div class="row clearfix mb-0">
+            <div class="justify-content-center">
+              <form>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
                         <input [(ngModel)]='usuario.nome'
                         class="form-control"
                         type="text"
                         name="nome"
                         id="nome"
                         placeholder="Seu nome"/>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input [(ngModel)]='usuario.usuario'
-                        class="form-control"
-                        type="text"
-                        name="usuario"
-                        id="usuario"
-                        placeholder="Seu usuário"/>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input [(ngModel)]='usuario.email'
-                        class="form-control"
-                        type="text"
-                        name="email"
-                        id="email"
-                        placeholder="Seu e-mail"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input class="form-control"
-                        type="password"
-                        name="senha"
-                        id="senha"
-                        placeholder="Sua senha"
-                        (input)='confirmSenha($event)'/>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="confirmSenha">Confirmar Senha</label>
-                        <input [(ngModel)]='usuario.senha'
-                        class="form-control"
-                        type="password"
-                        name="confirmSenha"
-                        id="confirmSenha"
-                        placeholder="Confirme sua senha"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tipo">Selecione o tipo de usuário</label>
-                        <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
-                            <option>Selecione um tipo de usuário:</option>
-                            <option value="normal">Usuário Padrão</option>
-                            <option value="adm">Usuário Administrador</option>
-                        </select>
-                    </div>
-                    
-                    <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger mr-4" routerLink='/entrar'>Cancelar</button>
-                    <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
-                    </div>
                 </div>
+           
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                    <input [(ngModel)]='usuario.usuario'
+                    class="form-control"
+                    type="text"
+                    name="usuario"
+                    id="usuario"
+                    placeholder="Seu usuário"/>
+                </div>
+
+           
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                    <input [(ngModel)]='usuario.email'
+                    class="form-control"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Seu e-mail"/>
+                </div>
+
+
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <input class="form-control"
+                    type="password"
+                    name="senha"
+                    id="senha"
+                    placeholder="Sua senha"
+                    (input)='confirmSenha($event)'/>
+                </div>
+                
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <input [(ngModel)]='usuario.senha'
+                    class="form-control"
+                    type="password"
+                    name="confirmSenha"
+                    id="confirmSenha"
+                    placeholder="Confirme sua senha"/>
+                </div>
+                
+               
+                <div class="input_field select_option">
+                    <label for="tipo">Selecione o tipo de usuário</label>
+                    <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                      
+                        <option value="normal">Usuário Padrão</option>
+                        <option value="adm">Usuário Administrador</option>
+                    </select>
+                  <div class="select_arrow"></div>
+                </div>
+                <div style="text-align: center">
+                <button type="submit" class="btn mr-4" (click)='cadastrar()'>Cadastrar</button>
+                
+                <button type="submit" class="btn" routerLink='/entrar'>Cancelar</button>
+              </div>
+              </form>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+ 
+
+</body>
+</html>
