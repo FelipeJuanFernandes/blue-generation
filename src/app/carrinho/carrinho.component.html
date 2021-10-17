@@ -1,1 +1,164 @@
-<p>carrinho works!</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <h1 class="text-center">Meu carrinho</h1>
+                    <hr>
+                    <div class="container text-center">
+                        <h2>Produtos selecionados</h2>
+
+                        <div class="col-md-12 div1 mt-3" *ngFor="let item of comprados">
+                            <div class="">
+                                <p class="description__p1 mb-4">{{ item.id }}</p>
+                                <p class="description__p1 mb-4">{{ item.nome }}</p>
+                                <img class="description__p1 mb-4" src="{{item.foto}}" width="200px" height="200px">
+                                <p class="description__p1 mb-4">{{ item.preco | currency: "BRL" }}</p>
+                                <p class="description__p1 mb-5">{{item.descricao}}</p>
+                            </div>
+                        </div>
+                        <p class="description__p1 mt-3 mb-3 div1"><strong> {{ total() | currency: "BRL" }} </strong></p>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <!-- <button type="button" class="btn" (click)='clearItens()'>Limpar <i class="fa fa-trash-o" aria-hidden="true"></i></button> -->
+                    </div>
+                    <div class="d-flex justify-content-center mt-5 mb-3">
+                        <h2>Dados pessoais</h2>
+                    </div>
+                    <div class="d-flex justify-content-center mt-2 mb-3">
+                        <h5 class="fs-subtitle">Preencha abaixo seus dados pessoais</h5>
+                    </div>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputNome4">Nome</label>
+                                <input type="text" class="form-control" id="inputNome4" placeholder="Nome">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Sobrenome</label>
+                                <input type="text" class="form-control" id="inputNome4" placeholder="Sobrenome">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCpf">CPF</label>
+                                <input type="text" name="CPF" class="form-control" placeholder="Informe seu CPF"/>  
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="dataNascimento">Data de nascimento</label>
+                                <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" placeholder="dd/mm/aaaa"/>
+                            </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputTelefone">Celular</label>
+                            <input type="text" class="form-control" name="phone" placeholder="Celular"/>  
+                        </div>
+                        <div class="form-group col-md-6">
+                                <label for="inputAddress">E-mail</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            </div>
+                    </div>
+                    </form>
+                    <div class="d-flex justify-content-center mt-5 mb-3">
+                        <h2>Endereço de Entrega</h2>
+                    </div>
+                    <div class="d-flex justify-content-center mt-2 mb-3">
+                        <h5 class="fs-subtitle">Precisamos saber para onde vamos enviar o seu pedido</h5>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="inputAddress">Endereço</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Rua Ipanema, nº 0">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputAddress2">Complemento</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputRef">Ponto de Referência</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Referência próxima ao local da entrega">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Cidade</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputEstado">Estado</label>
+                                <select id="inputEstado" class="form-control">
+                                    <option selected>Escolher...</option>
+                                    <option>Acre (AC)</option>
+                                    <option>Alagoas (AL)</option>
+                                    <option>Amapá (AP)</option>
+                                    <option>Amazonas (AM)</option>
+                                    <option>Bahia (BA)</option>
+                                    <option>Ceará (CE)</option>
+                                    <option>Distrito Federal (DF)</option>
+                                    <option>Espírito Santo (ES)</option>
+                                    <option>Goiás (GO)</option>
+                                    <option>Maranhão (MA)</option>
+                                    <option>Mato Grosso (MT)</option>
+                                    <option>Mato Grosso do Sul (MS)</option>
+                                    <option>Minas Gerais (MG)</option>
+                                    <option>Pará (PA)</option>
+                                    <option>Paraíba (PB)</option>
+                                    <option>Paraná (PR)</option>
+                                    <option>Pernambuco (PE)</option>
+                                    <option>Piauí (PI)</option>
+                                    <option>Rio de Janeiro (RJ)</option>
+                                    <option>Rio Grande do Norte (RN)</option>
+                                    <option>Rio Grande do Sul (RS)</option>
+                                    <option>Rondônia (RO)</option>
+                                    <option>Roraima (RR)</option>
+                                    <option>Santa Catarina (SC)</option>
+                                    <option>São Paulo (SP)</option>
+                                    <option>Sergipe (SE)</option>
+                                    <option>Tocantins (TO)</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputCEP">CEP</label>
+                                <input type="text" class="form-control" id="inputCEP">
+                            </div>
+                        </div>
+                        <div class="text-center mt-3 mb-5">
+                            <button type="submit" class="btn mb-4 mt3" data-toggle="modal" data-target="#modalExemplo">Efetuar Compra <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Compra efetuada com sucesso!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    Será enviado um e-mail com a confirmação com os dados da compra e formas de pagamento.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

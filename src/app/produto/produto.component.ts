@@ -10,12 +10,11 @@ import { ListaProdutosService } from '../service/lista-produtos.service';
 import { ProdutosService } from '../service/produtos.service';
 
 @Component({
-  selector: 'app-produtos',
-  templateUrl: './produtos.component.html',
-  styleUrls: ['./produtos.component.css']
+  selector: 'app-produto',
+  templateUrl: './produto.component.html',
+  styleUrls: ['./produto.component.css']
 })
-
-export class ProdutosComponent implements OnInit {
+export class ProdutoComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
   produtos: Produtos = new Produtos()
@@ -25,7 +24,6 @@ export class ProdutosComponent implements OnInit {
   idUsuario = environment.id
   listaProdutos: Produtos[]
 
-  comprados = this.carrinho.getItens()
 
   constructor(
     private router: Router,
@@ -33,6 +31,7 @@ export class ProdutosComponent implements OnInit {
     private categoriaService: CategoriaService,
     public authService: AuthService,
     private carrinho: ListaProdutosService
+
   ) { }
 
   ngOnInit() {
@@ -42,56 +41,41 @@ export class ProdutosComponent implements OnInit {
     }
 
     window.scroll(0,0)
+
     this.authService.refreshToken()
     this.categoriaService.refreshToken()
     this.produtosService.refreshToken()
     this.findByIdUsuario()
     this.getAllCategorias()
     this.getAllProdutos()
-    this.carrossel()
   }
 
-  carrossel() { const panels=document.querySelectorAll('.panel')
-    panels.forEach((panel)=>{ 
-    console.log(panel)
-    panel.addEventListener("click",()=>{ 
-    removeActiveClasses()
-    panel.classList.add("active");
-    }) 
-})
 
-function removeActiveClasses(){
-    panels.forEach((panel)=>{ 
-        panel.classList.remove("active")
-    })
-  }
-  }
-
-  getAllCategorias() {
+getAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
     })
-  }
+}
 
-  findByIdUsuario(){
+findByIdUsuario(){
     this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
     this.usuario = resp
   })
 }
 
-  findByIdCategoria() {
+findByIdCategoria() {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
     this.categoria = resp
     })
-  }
+}
 
-  getAllProdutos(){
+getAllProdutos(){
     this.produtosService.getAllProdutos().subscribe((resp: Produtos[])=>{
     this.listaProdutos = resp
   })
-  }
+}
 
-  publicar() {
+atualizar() {
     this.categoria.id = this.idCategoria
     this.produtos.categoria = this.categoria
     this.usuario.id = this.idUsuario
@@ -107,13 +91,4 @@ function removeActiveClasses(){
   })
 }
 
-  comprar(produto: any){
-  this.carrinho.addItem(produto);
-  alert('produto adicionado ao carrinho!')
-  
-}
-
-  total(){
-  return this.comprados.map(item => item.preco).reduce((a, b) => a + b,0);
-  }
 }

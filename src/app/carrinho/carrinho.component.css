@@ -1,0 +1,42 @@
+body{
+    color: #00173F;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f4edde;
+}
+
+h5{
+    font-style: oblique;
+}
+
+.form-control{
+    border-radius: 50px;
+}
+
+.btn {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    background-color: #cca97c;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.fa{
+    font-size: 16px; 
+}
+
+.description__p1 {
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center;
+    color: #00173f;
+}
+
+.div1 {
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    padding: 30px;
+    border-radius: 10px;
+}

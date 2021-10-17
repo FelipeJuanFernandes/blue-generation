@@ -17,6 +17,12 @@ export class ProdutosService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   getAllProdutos(): Observable<Produtos[]>{
   return this.http.get<Produtos[]>('https://bluegeneration.herokuapp.com/produto', this.token)
   }
@@ -42,3 +48,37 @@ export class ProdutosService {
 
 
 ///https://bluegeneration.herokuapp.com/
+
+
+
+
+
+// import { HttpClient, HttpHeaders } from '@angular/common/http';
+// import { Injectable } from '@angular/core';
+// import { environment } from 'src/environments/environment.prod';
+
+// @Injectable({
+//     providedIn: 'root',
+// })
+// export class CartService {
+//     items = [];
+
+//     token = {
+//     headers: new HttpHeaders().set('Authorization', environment.token),
+//     };
+
+//     constructor(private http: HttpClient) {}
+
+//     addToCart(produtos) {
+//     this.items.push(produtos);
+//     }
+
+//     getItems() {
+//     return this.items;
+//     }
+
+//     clearCart() {
+//     this.items = [];
+//     return this.items;
+//     }
+// }
