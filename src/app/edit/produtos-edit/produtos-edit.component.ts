@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produtos } from 'src/app/model/Produtos';
+import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from 'src/environments/environment.prod';
@@ -17,11 +18,13 @@ export class ProdutosEditComponent implements OnInit {
   categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
   idCategoria: number
+  listaProdutos: Produtos[]
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private produtosService: ProdutosService,
+    public authService: AuthService,
     private categoriaService: CategoriaService
     ) { }
 
@@ -30,14 +33,26 @@ export class ProdutosEditComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
+    
     let id = this.route.snapshot.params['id']
     this.findByIdProdutos(id)
     this.findAllCategoria
+
+    this.authService.refreshToken()
+    this.categoriaService.refreshToken()
+    this.produtosService.refreshToken()
+    this.getAllCategorias()
   }
 
   findByIdProdutos(id: number) {
     this.produtosService.getByIdProdutos(id).subscribe((resp: Produtos) => {
       this.produtos = resp
+    })
+  }
+
+  getAllCategorias() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
     })
   }
   

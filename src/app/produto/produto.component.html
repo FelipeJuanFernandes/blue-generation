@@ -1,0 +1,35 @@
+<head>
+    <title>Produtos</title>
+</head>
+
+<body>
+    
+    <a routerLink='/inicio' class="font-color2 ml-4">Início</a>
+    
+    <div class="container">
+            
+            <h4 class="font-color1 d-flex justify-content-center mt-3 mb-3">Produtos</h4>
+            <p class="font-color1 d-flex justify-content-center mb-3">Veja aqui todosos produtos</p>
+
+    </div>
+
+    <div class="card-columns">
+        <div class="cols-md-4">
+            <div class="card" *ngFor='let item of listaProdutos'>
+                <div class="card-body">
+                <h5 class="card-title">Id: {{item.id}}</h5>
+                <h5 class="card-title">Nome: {{item.nome}}</h5>
+                <p class="card-text">Descrição: {{item.descricao}}</p>
+                <p class="card-text">Preço: R${{item.preco}}</p>
+                <p class="card-text">Quantidade: {{item.quantidade}}</p>
+                <p class="card-text">Categoria: {{item.categoria.tipo}}</p>
+                <p class="card-text">Criado por: {{item.usuario.nome}}</p>
+                <a [routerLink]="['/produtos-edit', item.id]" href="#" class="btn-cadastrar mr-3">Editar</a>
+                <a [routerLink]="['/produtos-delete', item.id]" href="#" class="btn-cancel">Apagar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
