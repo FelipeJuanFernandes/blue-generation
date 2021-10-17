@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 
-body {
+body, html {
 	background-color: #00173f;
 	font-size: 16px;
 	line-height: 1.25;
 	letter-spacing: 1px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+	padding-top: 50px;
 }
 
 * {
@@ -24,8 +25,9 @@ body {
 	width: 100%;
 	max-width: 525px;
 	min-height: 680px;
+	
 	/*background-image: url(https://i.imgur.com/5b5ldeN.jpg); tirei img por não entrar em contraste*/
-	box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.589);
+	/* box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.589); */
 }
 
 .login-container:after {
@@ -38,20 +40,22 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	height: 600px;
+	border-radius: 50px;
 	background-image: radial-gradient(
 			ellipse at left bottom,
 			rgba(247, 239, 220, 0.973) 0%,
 			rgb(179, 163, 135) 59%,
 			rgba(240, 193, 93, 0.815) 100%
 		);
-	box-shadow: 0 -0px 100px -20px rgba(0, 0, 0, 0.562);
+	/* box-shadow: 0 -0px 100px -20px rgba(0, 0, 0, 0.562); */
 }
 
 
 .form-login {
 	position: relative;
 	z-index: 1;
-	padding-bottom: 4.5rem;
+	padding-bottom: 3rem;
 	border-bottom: 2px solid rgba(2, 5, 59, 0.918);
 }
 
@@ -153,7 +157,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	margin-top: 1rem;
+	margin-top: 3rem;
 	padding: 0.75rem;
 	border-radius: 2rem;
 	display: block;
