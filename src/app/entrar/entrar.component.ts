@@ -19,11 +19,11 @@ export class EntrarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
   }
 
   entrar() {
-    this.auth.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=>{
+    this.auth.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp
 
       environment.token = this.usuarioLogin.token
@@ -35,10 +35,10 @@ export class EntrarComponent implements OnInit {
       this.router.navigate(['/inicio'])
 
     }, erro => {
-      if(erro.status == 500){
-        alert('Usuario ou senha inválido!')
-    }
-  })
-}
+      if (erro.status == 401) {
+        alert('Digite usuário e senha válidos!');
+      }
+    })
+  }
 
 }

@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.description__p {
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  text-align: justify;
+  color: #f8f8f8;
+}
+
+
+.description__p2 {
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #f8f8f8;
+}
+
+
+
+/*--------------------------------
+Imagem de Início
+---------------------------------*/
+
+.story-img {
+  background-image: url("https://i.imgur.com/gnSZD21.jpg");
+  height: 300px;
+  padding-bottom: 52%;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #1d140b;
+}
+
+/*--------------------------------
+BANNER
+---------------------------------*/
+.banner {
+  background-image: url("https://i.imgur.com/gnSZD21.jpg");
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: banner-in 2s;
+}
+
+.banner__container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.banner__title {
+  font-size: 40px;
+  color: #f8f8f8;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  animation: opacity 3s;
+
+}
+
+.banner__text {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-style: italic;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 18px;
+  animation: opacity 3s;
+}
+
+
+/*--------------------------------
+Animação
+---------------------------------*/
+
+@-webkit-keyframes banner-in {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@-moz-keyframes banner-in {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@-o-keyframes banner-in {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes banner-in {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  background-color: #cca97c;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+
+.btn--opacity {
+  opacity: 50%;
+}
+
+
+/*BOTÃO PADRÃO*/
+  .btn {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    background-color: #cca97c;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .title-dest{
+    display: flex;
+    justify-content: center;
+   }
+   
+   .title-dest{
+     font-size: 30px;
+     text-transform: uppercase;
+     font-weight: 900;
+     color:#a7abaf82 ;
+     -webkit-background-clip: text;
+     background-image: url(https://stoleshnica-fasad.ru/wp-content/uploads/2016/03/Panel-iz-stekla-dlya-kukhni-panoramy-prirody-art.-0003-600x190.jpg);
+     animation: water 15s infinite;
+   }
+   
+   @keyframes water {
+     from {background-position: left 0 top 0;}
+     to {background-position: left 1000px top 0;}
+   }
+
+
+/*parallax*/
+  body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+
+  background-color: #f4edde;
+
+
+}
+
+.firstimg,
+.secondimg,
+.thirdimg,
+.forthimg {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  /*
+    fixado = parallax
+    scroll = normal
+  */
+  background-attachment: fixed;
+}
+
+
+.secondimg {
+  background-image: url(https://i.imgur.com/EaXKUIt.jpg);
+  min-height: 400px;
+}
+
+.thirdimg {
+  background-image: url(https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb);
+  min-height: 400px;
+}
+
+.forthimg {
+  background-image: url(https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb);
+  min-height: 100%;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section1 {
+  text-align: center;
+
+}
+
+
+/*Parte onde fica o texto PARALLAX*/
+.section-dark {
+  background-color: #00173f;
+  color: rgb(253, 253, 253);
+}
+/*texto do parallax*/
+.text {
+  position: absolute;
+  top: 100%; /*abaixa pela metade*/
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+/*RESPONSIVIDADE*/
+@media (max-width: 568px) {
+  .firstimg,
+  .secondimg,
+  .thirdimg,
+  .forthimg {
+    background-attachment: scroll;
+  }
+}
+/*box titulo conheça*/
+.tmm-team .hgroup .title-4 {
+  
+  font-weight: 300;
+  font-size: 36px;
+  color: #00173f;
+  border: 3px solid #00173f;
+  display: outside;
+  padding: 15px 16px;
+border-radius: 50px;
+}
+
+
+
+/* Hexagonos de perfil */
+
+.tmm-team .tmm-row {
+  margin-right: -20px;
+  margin-left: -20px;
+  text-align: center;
+}
+
+.tmm-team .item-hexagon-4 {
+  background-color: transparent;
+  text-align: center;
+  overflow: hidden;
+  width: 206px;
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+
+.tmm-team .item-hexagon-4 .face-container {
+  padding: 0;
+  position: relative;
+}
+
+.tmm-team .item-hexagon-4 .hexagon {
+  overflow: hidden;
+  visibility: hidden;
+  cursor: pointer;
+  width: 206px;
+  height: 274px;
+  margin: 0 auto;
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.tmm-team .item-hexagon-4 .hexagon-in {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+
+.tmm-team .item-hexagon-4 .hexagon-bg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  visibility: visible;
+  overflow: hidden;
+  background-size: auto;
+  -webkit-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  -webkit-transition: background-size .2s ease-in;
+  transition: background-size .2s ease-in;
+}
+
+.tmm-team .item-hexagon-4 .face-container:before,
+.tmm-team .item-hexagon-4 .face-container:after {
+  -webkit-transition: -webkit-transform .35s ease, opacity .35s ease;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.tmm-team .item-hexagon-4 .face-container:before {
+  position: absolute;
+  width: 150px;
+  height: 10px;
+  background-color: #031738;
+  content: "";
+  bottom: 52px;
+  left: -48px;
+  z-index: 0;
+  -webkit-transform: skewY(30deg);
+  transform: skewY(30deg);
+}
+.tmm-team .item-hexagon-4 .face-container:after {
+  position: absolute;
+  width: 150px;
+  height: 10px;
+  background-color: #00348d;
+  content: "";
+  bottom: 52px;
+  right: -46px;
+  z-index: 0;
+  -webkit-transform: skewY(-30deg);
+  transform: skewY(-30deg);
+}
+
+.tmm-team .item-hexagon-4 .face-container:hover:after,
+.tmm-team .item-hexagon-4 .face-container:hover:before {
+  opacity: 0;
+  -webkit-transition: -webkit-transform .35s ease, opacity .35s ease;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.tmm-team .item-hexagon-4 .face-container:hover:before {
+  -webkit-transform: skewY(30deg) translateY(50px);
+  transform: skewY(30deg) translateY(50px);
+}
+
+.tmm-team .item-hexagon-4 .face-container:hover:after {
+  -webkit-transform: skewY(-30deg) translateY(50px);
+  transform: skewY(-30deg) translateY(50px);
+}
+
+.tmm-team .item-hexagon-4 .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  height: 100%;
+  z-index: 2;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.ie8 .tmm-team .item-hexagon-4 .info {
+  display: none;
+}
+
+.tmm-team .item-hexagon-4 .info h3 {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 60px;
+  text-transform: capitalize;
+  -webkit-transform: translateX(-80%);
+  transform: translateX(-80%);
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+  min-width: 200px;
+  text-align: center;
+}
+
+.tmm-team .item-hexagon-4 .info p {
+  border-top: 1px solid #FFF;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  -webkit-transform: translateX(80%);
+  transform: translateX(80%);
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.tmm-team .item-hexagon-4 .face-container:hover .info {
+  opacity: 1;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.tmm-team .item-hexagon-4 .face-container:hover .info h3 {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.tmm-team .item-hexagon-4 .face-container:hover .info p {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.info p a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  margin: 0 15px;
+}
+
+.tmm-team .item-hexagon-4 .hexagon-bg.type-1 {
+  background: url(https://i.imgur.com/vy9IOuK.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tmm-team .item-hexagon-4 .hexagon-bg.type-2 {
+  background: url(https://i.imgur.com/EnacOz4.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tmm-team .item-hexagon-4 .hexagon-bg.type-3 {
+  background: url(https://i.imgur.com/QcmGZ1t.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tmm-team .item-hexagon-4 .hexagon-bg.type-4 {
+  background: url(https://i.imgur.com/zN4lcxy.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tmm-team .item-hexagon-4 .hexagon-bg.type-5 {
+  background: url(https://i.imgur.com/Wn67e3h.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
