@@ -20,22 +20,6 @@ export class EntrarComponent implements OnInit {
   }
 
   entrar() {
-
-    this.auth.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
-      this.usuarioLogin = resp
-
-      environment.token = this.usuarioLogin.token
-      environment.id = this.usuarioLogin.id
-      environment.nome = this.usuarioLogin.nome
-      environment.tipo = this.usuarioLogin.tipo
-      console.log("🚀 ~ file: entrar.component.ts ~ line 33 ~ EntrarComponent ~ this.auth.entrar ~ environment", environment)
-
-       this.router.navigate(['/inicio'])
-
-    }, erro => {
-      if (erro.status == 401) {
-        alert('Digite usuário e senha válidos!');
-
     this.auth.entrar(this.usuarioLogin).subscribe(
       (resp: UsuarioLogin) => {
         this.usuarioLogin = resp;
@@ -55,7 +39,6 @@ export class EntrarComponent implements OnInit {
         if (erro.status == 401) {
           alert('Digite usuário e senha válidos!');
         }
-
       }
     );
   }
