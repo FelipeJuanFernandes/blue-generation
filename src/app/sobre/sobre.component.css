@@ -7,15 +7,12 @@
   color: #f8f8f8;
 }
 
-
 .description__p2 {
   margin-bottom: 4px;
   letter-spacing: 1px;
   text-align: center;
   color: #f8f8f8;
 }
-
-
 
 /*--------------------------------
 Imagem de Início
@@ -71,7 +68,6 @@ BANNER
   letter-spacing: 1px;
   font-weight: 500;
   animation: opacity 3s;
-
 }
 
 .banner__text {
@@ -83,7 +79,6 @@ BANNER
   margin-bottom: 18px;
   animation: opacity 3s;
 }
-
 
 /*--------------------------------
 Animação
@@ -171,60 +166,59 @@ Animação
   border-radius: 50px;
   text-align: center;
   text-transform: uppercase;
-  
 }
 
 .btn--opacity {
   opacity: 50%;
 }
 
-
 /*BOTÃO PADRÃO*/
-  .btn {
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: 500;
-    background-color: #cca97c;
-    border-radius: 50px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .title-dest{
-    display: flex;
-    justify-content: center;
-   }
-   
-   .title-dest{
-     font-size: 30px;
-     text-transform: uppercase;
-     font-weight: 900;
-     color:#a7abaf82 ;
-     -webkit-background-clip: text;
-     background-image: url(https://stoleshnica-fasad.ru/wp-content/uploads/2016/03/Panel-iz-stekla-dlya-kukhni-panoramy-prirody-art.-0003-600x190.jpg);
-     animation: water 15s infinite;
-   }
-   
-   @keyframes water {
-     from {background-position: left 0 top 0;}
-     to {background-position: left 1000px top 0;}
-   }
+.btn {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  background-color: #cca97c;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.title-dest {
+  display: flex;
+  justify-content: center;
+}
 
+.title-dest {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #a7abaf82;
+  -webkit-background-clip: text;
+  background-image: url(https://stoleshnica-fasad.ru/wp-content/uploads/2016/03/Panel-iz-stekla-dlya-kukhni-panoramy-prirody-art.-0003-600x190.jpg);
+  animation: water 15s infinite;
+}
+
+@keyframes water {
+  from {
+    background-position: left 0 top 0;
+  }
+  to {
+    background-position: left 1000px top 0;
+  }
+}
 
 /*parallax*/
-  body,
+body,
 html {
   height: 100%;
   margin: 0;
   font-size: 16px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   line-height: 1.8em;
 
   background-color: #f4edde;
-
-
 }
 
 .firstimg,
@@ -235,14 +229,13 @@ html {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.7;
+  /* opacity: 0.7; */
   /*
     fixado = parallax
     scroll = normal
   */
   background-attachment: fixed;
 }
-
 
 .secondimg {
   background-image: url(https://i.imgur.com/EaXKUIt.jpg);
@@ -261,14 +254,12 @@ html {
 
 .section {
   text-align: center;
-  padding: 50px 80px;
+  padding: 30px 80px;
 }
 
 .section1 {
   text-align: center;
-
 }
-
 
 /*Parte onde fica o texto PARALLAX*/
 .section-dark {
@@ -298,17 +289,14 @@ html {
 }
 /*box titulo conheça*/
 .tmm-team .hgroup .title-4 {
-  
   font-weight: 300;
   font-size: 36px;
   color: #00173f;
   border: 3px solid #00173f;
   display: outside;
   padding: 15px 16px;
-border-radius: 50px;
+  border-radius: 50px;
 }
-
-
 
 /* Hexagonos de perfil */
 
@@ -372,14 +360,14 @@ border-radius: 50px;
   -ms-transform: rotate(-60deg);
   -o-transform: rotate(-60deg);
   transform: rotate(-60deg);
-  -webkit-transition: background-size .2s ease-in;
-  transition: background-size .2s ease-in;
+  -webkit-transition: background-size 0.2s ease-in;
+  transition: background-size 0.2s ease-in;
 }
 
 .tmm-team .item-hexagon-4 .face-container:before,
 .tmm-team .item-hexagon-4 .face-container:after {
-  -webkit-transition: -webkit-transform .35s ease, opacity .35s ease;
-  transition: transform .35s ease, opacity .35s ease;
+  -webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .tmm-team .item-hexagon-4 .face-container:before {
@@ -410,8 +398,8 @@ border-radius: 50px;
 .tmm-team .item-hexagon-4 .face-container:hover:after,
 .tmm-team .item-hexagon-4 .face-container:hover:before {
   opacity: 0;
-  -webkit-transition: -webkit-transform .35s ease, opacity .35s ease;
-  transition: transform .35s ease, opacity .35s ease;
+  -webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .tmm-team .item-hexagon-4 .face-container:hover:before {
@@ -432,8 +420,8 @@ border-radius: 50px;
   opacity: 0;
   height: 100%;
   z-index: 2;
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
 .ie8 .tmm-team .item-hexagon-4 .info {
@@ -447,44 +435,44 @@ border-radius: 50px;
   text-transform: capitalize;
   -webkit-transform: translateX(-80%);
   transform: translateX(-80%);
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
   min-width: 200px;
   text-align: center;
 }
 
 .tmm-team .item-hexagon-4 .info p {
-  border-top: 1px solid #FFF;
+  border-top: 1px solid #fff;
   padding: 10px;
   color: #fff;
   font-size: 14px;
   -webkit-transform: translateX(80%);
   transform: translateX(80%);
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
 .tmm-team .item-hexagon-4 .face-container:hover .info {
   opacity: 1;
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
 .tmm-team .item-hexagon-4 .face-container:hover .info h3 {
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
 .tmm-team .item-hexagon-4 .face-container:hover .info p {
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
-.info p a{
+.info p a {
   text-decoration: none;
   color: #fff;
   font-size: 30px;
@@ -521,4 +509,3 @@ border-radius: 50px;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
