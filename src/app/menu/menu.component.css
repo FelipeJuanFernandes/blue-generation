@@ -10,8 +10,10 @@
 
 nav{
     z-index: 5;
+    background-color: #f4edde;
   }
-  
+
+
   .navbar-light .navbar-nav .nav-link{
     color: #00173F;
   }
@@ -19,7 +21,6 @@ nav{
   .navbar-nav{
     text-align: center;
   }
-  
   
   .nav-link{
     position: relative;
