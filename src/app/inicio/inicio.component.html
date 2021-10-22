@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -15,6 +19,7 @@
 
 <body>
   <app-menu></app-menu>
+
 
 
 
@@ -86,12 +91,18 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
+
       <div class="carousel-item active">
         <img class="d-block w-100" src="https://i.imgur.com/M3LTT8I.jpg" alt="First slide">
+
+      <div class="carousel-item active" >
+        <img class="d-block w-100" src="../assets/canudopapel.jpeg" alt="First slide">
+
         <div class="carousel-caption d-none d-md-block">
           <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 1s;">Produtos</h5>
           <p class="animate__animated animate__bounceInLeft" style="animation-delay: 2s;">Já conhece nossos produtos?
           </p>
+
           <button routerLink='/produtos' type="submit" class="btn mb-4 mt-3 animate__animated animate__zoomIn"
             style="animation-delay: 3s;">Veja mais<i aria-hidden="true"></i>
           </button>
@@ -106,10 +117,24 @@
             sustentável</p>
           <button routerLink='/produtos' type="submit" class="btn mb-4 mt-3 animate__animated animate__zoomIn"
             style="animation-delay: 3s;">Veja mais<i aria-hidden="true"></i>
+
+          <button routerLink='/produtos' type="submit" class="btn mb-4 mt-3 animate__animated animate__zoomIn" style="animation-delay: 3s;" >Veja mais<i aria-hidden="true"></i>
+        </button>
+          <!-- <a href="#" class="btn animate__animated animate__zoomIn" style="animation-delay: 3s;">Veja mais</a> -->
+        </div>
+      </div>
+      <div class="carousel-item" >
+        <img class="d-block w-100" src="../assets/decoracao.jpeg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="animate__animated animate__zoomIn" style="animation-delay: 1s;">Produtos recicláveis</h5>
+          <p class="animate__animated animate__fadeInUp" style="animation-delay: 2s;">Pensando em um mundo mais sustentável</p>
+          <button routerLink='/produtos' type="submit" class="btn mb-4 mt-3 animate__animated animate__zoomIn" style="animation-delay: 3s;" >Veja mais<i aria-hidden="true"></i>
+
           </button>
           <!-- <a href="#" class="btn animate__animated animate__zoomIn" style="animation-delay: 3s;">Veja mais</a> -->
         </div>
       </div>
+
       <div class="carousel-item">
         <img class="d-block w-100" src="https://i.imgur.com/e5NDd6F.jpg" alt="Third slide">
         <div class="carousel-caption d-none d-md-block">
@@ -117,6 +142,14 @@
           <p class="animate__animated animate__fadeInUp" style="animation-delay: 2s;">Conheça um pouco sobre nós</p>
           <button routerLink='/sobre' type="submit" class="btn mb-4 mt-3 animate__animated animate__zoomIn"
             style="animation-delay: 3s;">Veja mais<i aria-hidden="true"></i>
+
+      <div class="carousel-item" >
+        <img class="d-block w-100" src="../assets/AdobeStock_439908023.jpeg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="animate__animated animate__flipInX" style="animation-delay: 1s;">Sobre nós</h5>
+          <p class="animate__animated animate__fadeInUp" style="animation-delay: 2s;">Conheça um pouco sobre nós</p>
+          <button routerLink='/sobre' type="submit" class="btn mb-4 mt-3 animate__animated animate__zoomIn" style="animation-delay: 3s;">Veja mais<i aria-hidden="true"></i>
+
           </button>
           <!-- <a href="#" class="btn animate__animated animate__zoomIn" style="animation-delay: 3s;">Veja mais</a> -->
         </div>
@@ -178,17 +211,30 @@
     </div>
   </div>
 
+
   <app-rodape></app-rodape>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
+
+<app-rodape></app-rodape> 
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+
 </body>
 
 </html>
