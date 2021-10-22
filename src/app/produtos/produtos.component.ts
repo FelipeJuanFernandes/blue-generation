@@ -37,9 +37,9 @@ export class ProdutosComponent implements OnInit {
 
   ngOnInit() {
 
-    if (environment.token == '') {
-      this.router.navigate(['/entrar'])
-    }
+    // if (environment.token == '') {
+    //   this.router.navigate(['/entrar'])
+    // }
 
     window.scroll(0,0)
     this.authService.refreshToken()

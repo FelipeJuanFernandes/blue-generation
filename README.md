@@ -101,7 +101,7 @@ IDE: Visual Studio Code
   <img align="center" alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
 </div><br>
 
-- Deploy: Heroku [Link do site final](https://bluegeneration.herokuapp.com/)
+- Deploy: Heroku [Link do site final](https://bluegeneration.netlify.app/inicio)
 
 -- BSM: Orientação ao futuro, responsabilidade pessoal, mentalidade de crescimento, persistência, trabalho em equipe, atenção ao detalhe, proatividade e comunicação.
 
