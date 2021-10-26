@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Usuario } from '../model/Usuario';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,14 +13,37 @@ import { environment } from 'src/environments/environment.prod';
 export class MenuComponent implements OnInit {
   id = environment.id;
   nome = environment.nome;
+  idUsuario = environment.id;
+  
+  usuario: Usuario = new Usuario();
+  
+  constructor(
+    private router: Router,
+    public authService: AuthService,
+  ) {}
 
-  constructor(private router: Router) {}
+  ngOnInit() {
+    this.authService.refreshToken()
+    this.findByIdUsuario()
 
-  ngOnInit() {}
+  }
 
   sair() {
     this.router.navigate(['/entrar']);
     environment.token = '';
     environment.nome = '';
   }
-}
+
+  findByIdUsuario() {
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
+        this.usuario = resp;
+    });
+    
+    let ok : boolean = false
+    if(environment.tipo == "adm") {
+      ok = true
+    } return ok
+  }
+  }
+
+
