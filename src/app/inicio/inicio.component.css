@@ -17,18 +17,7 @@ html, body{
   transition: .3s ease-in-out;
 }
 
-/* .logo:hover{
-  transform: scale(1.2);
-} */
 
-/* Carousel */
-
-.carousel-item{
-  height: 100vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  background-size: cover;
-}
 
 .carousel-caption{
   margin-bottom: 220px;
@@ -68,129 +57,35 @@ html, body{
     border: 2px solid #cca97c;
   }
 
-/*            */
+/* Botões */
 
-.btn
-{    
-  margin:auto;
-  text-decoration:none;
-  padding: 10px;
-  font-size: 16px;
-  
-    box-shadow: 0em 4em 3em #cca97c inset,
-                -7em 0em 2em #ff0000ba inset;
-  
-  border: 2px solid #3c2310;
-  color:white;
-  display:inline-block;
-  border-radius:12px;
-  background-color:#cca97c;
-  transition: all 0.3s;
-  position:relative;
+.btn {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  background-color: #cca97c;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 
 .btn:hover{
   background-color: #cca97c;
-  border: 2px solid #cca97c;
-}
-
-
-/*     Navbar      */
-
-nav{
-  z-index: 5;
-}
-
-.navbar-light .navbar-nav .nav-link{
-  color: #00173F;
-}
-
-.navbar-nav{
-  text-align: center;
-  background-color: #00aced;
-}
-
-
-.nav-link{
-  position: relative;
-  display: block;
-  margin: 0 10px;
-  padding: 5px 10px;
-  color: #00173F;
-  font-size: 20px;
-  transition: .5s;
-}
-
-.nav-link:before{
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 10px;
-  height: 10px;
-  border: solid 2px #00173F;
-  border-width: 0 0 2px 2px;
-  opacity: 0;
-  transition: .5s;
-}
-
-.nav-link:hover:before{
-  bottom: -8px;
-  left: -8px;
-  opacity: 1;
-}
-
-.nav-link:after{
-  content: '';
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 10px;
-  height: 10px;
-  border: solid 2px #00173F;
-  border-width: 2px 2px 0 0;
-  opacity: 0;
-  transition: .5s;
-}
-
-.nav-link:hover:after{
-  top: -8px;
-  right: -8px;
-  opacity: 1;
-}
-
-.nav-link:hover{
-  background: #5571a3;
-  color: black;
-}
-
-.w-100{
-  height: 100vh;
-}
-
-@media only screen and (max-width: 767px){
-  .navbar-nav.ml-auto{
-    background: rgba(0, 0, 0, 5);
-  }
-
-  .navbar-toggler{
-    padding: 1px 5px;
-    font-size: 18px;
-    line-height: 0.3;
-    background: #fff;
-  }
+  border: 2px solid #3c2310;
 }
 
 /* Destaques */
 
 .title-dest{
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .title-dest{
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
   font-weight: 900;
   color:#a7abaf82 ;
@@ -301,12 +196,7 @@ nav{
   letter-spacing: .2rem;
 }
 
-.video{
-  min-width: 100vh;
-  min-height: 100vh;
-  width: 100%;
-  height: 100;
-}
+
 
 
 /* Paralax bonus */
@@ -317,11 +207,6 @@ nav{
   background-size:cover;
   background-repeat:no-repeat;
   align-items: center;
-
-  /*
-    fixed = parallax
-    scroll = normal
-  */
   background-attachment:fixed;
 }
 
@@ -379,7 +264,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 600px;
 }
 
 /* /fonte formulario/ */
@@ -389,4 +273,62 @@ nav{
   text-align: center;
   color: #fff;
   font-size: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+
+  .video{
+      width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+
+  .carousel-item{
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+
+  .video{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .carousel-item{
+    /* height: 100vh; */
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+
+  .video{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .carousel-item{
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+
+  .video{
+    width: 100%;
+  }
+
 }

@@ -69,7 +69,7 @@ nav{
   }
   
   .nav-link:hover{
-    background: #1d5bc7;
+    background: #aadef8;
     color: rgb(2, 2, 2);
   }
   
@@ -79,12 +79,13 @@ nav{
   }
   
   @media only screen and (max-width: 767px){
+
     .navbar-nav.ml-auto{
-      background: rgba(0, 0, 0, 5);
       background-color: #f4edde;
     }
   
     .navbar-toggler{
+      color: #00173F;
       padding: 1px 5px;
       font-size: 18px;
       line-height: 0.3;

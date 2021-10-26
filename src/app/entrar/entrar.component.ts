@@ -13,7 +13,10 @@ import { AuthService } from '../service/auth.service';
 export class EntrarComponent implements OnInit {
   usuarioLogin: UsuarioLogin = new UsuarioLogin();
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(
+    private auth: AuthService, 
+    private router: Router
+  ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
@@ -28,11 +31,7 @@ export class EntrarComponent implements OnInit {
         environment.id = this.usuarioLogin.id;
         environment.nome = this.usuarioLogin.nome;
         environment.tipo = this.usuarioLogin.tipo;
-        console.log(
-          '🚀 ~ file: entrar.component.ts ~ line 33 ~ EntrarComponent ~ this.auth.entrar ~ environment',
-          environment
-        );
-
+        
         this.router.navigate(['/inicio']);
       },
       (erro) => {

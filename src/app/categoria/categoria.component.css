@@ -22,79 +22,21 @@ body {
     letter-spacing: 1px;
 }
 
-.btn {
-    color: #f8f8f8;
-    padding: 10px 20px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: 500;
-    background-color: #cca97c;
-    border-radius: 50px;
-    border-color: 2px solid #807361;
-    text-align: center;
-    text-transform: uppercase;
-    
-}
-
-.btn-cancel {
-    color: #b12a5b;
-    padding: 10px 20px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: 500;
-    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-    border-radius: 50px;
-    border: 1.8px solid #b12a5b;
-    text-align: center;
-    text-transform: uppercase;
-    font-style: bold
-    
-}
-
-.btn-cancel:hover {
-    animation: opacity 3s;
-    opacity: 60%;
-    
-}
-
-.btn:hover {
-    animation: opacity 3s;
-    opacity: 50%;
-}
-
-.btn-cadastrar:hover {
-    animation: opacity 3s;
-    opacity: 60%;
-    
-}
-
-.btn-cadastrar {
+.font-color1 {
     color: #00173f;
-    padding: 10px 20px;
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 2px;
-    font-weight: 500;
-    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    border-radius: 50px;
-    border: 1.8px solid #00173f;
+    font-weight: 700;
     text-align: center;
-    text-transform: uppercase;
     font-style: bold;
-    
-    }
+}
 
-    input {
-        background-color: #f8f8f8;
-    }
+input {
+    background-color: #f8f8f8;
+}
 
-    .font-color1 {
-        color: #00173f;
-        font-size: 18px;
-        letter-spacing: 2px;
-        font-weight: 700;
-        text-align: center;
-        font-style: bold;
-    }
+
+@media screen and (min-width: 991px) {
 
     .font-color2 {
         color: #00173f;
@@ -104,4 +46,227 @@ body {
         text-align: justify;
         font-style: bold;
     }
+
+    .btn {
+        color: #f8f8f8;
+        padding: 10px 20px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        background-color: #cca97c;
+        border-radius: 50px;
+        border-color: 2px solid #807361;
+        text-align: center;
+        text-transform: uppercase;   
+    }
+
+        .btn-cadastrar {
+        color: #00173f;
+        padding: 10px 20px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+        border-radius: 50px;
+        border: 1.8px solid #00173f;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: bold;  
+    }
     
+    .btn-cancel {
+        color: #b12a5b;
+        padding: 10px 20px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+        border-radius: 50px;
+        border: 1.8px solid #b12a5b;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: bold
+        
+    }
+    
+    .btn:hover {
+        animation: opacity 3s;
+        opacity: 50%;
+    }
+    
+    .btn-cadastrar:hover {
+        animation: opacity 3s;
+        opacity: 60%; 
+    }
+
+    .btn-cancel:hover {
+        animation: opacity 3s;
+        opacity: 60%;  
+    }
+    
+    .font-color1 {
+        color: #00173f;
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-align: center;
+        font-style: bold;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+
+    .font-color2 {
+        color: #00173f;
+        font-size: 11px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-align: justify;
+        font-style: bold;
+    }
+
+    .btn {
+        color: #f8f8f8;
+        padding: 5px 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        background-color: #cca97c;
+        border-radius: 50px;
+        border-color: 2px solid #807361;
+        text-align: center;
+        text-transform: uppercase;
+    
+    }
+
+    .btn-cadastrar {
+        color: #00173f;
+        padding: 8px 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+        border-radius: 50px;
+        border: 1.8px solid #00173f;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: bold;  
+    }
+
+    .btn-cancel {
+        color: #b12a5b;
+        padding: 5px 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+        border-radius: 50px;
+        border: 1.8px solid #b12a5b;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: bold
+    }
+
+    .btn-cancel:hover {
+        animation: opacity 3s;
+        opacity: 60%;
+        
+    }
+    
+    .btn:hover {
+        animation: opacity 3s;
+        opacity: 50%;
+    }
+    
+    .btn-cadastrar:hover {
+        animation: opacity 3s;
+        opacity: 60%;
+        
+    }
+
+    input {
+        background-color: #f8f8f8;
+        max-width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .font-color2 {
+        color: #00173f;
+        font-size: 11px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-align: justify;
+        font-style: bold;
+    }
+
+    .btn {
+        color: #f8f8f8;
+        padding: 5px 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        background-color: #cca97c;
+        border-radius: 50px;
+        border-color: 2px solid #807361;
+        text-align: center;
+        text-transform: uppercase;
+    
+    }
+
+    .btn-cadastrar {
+        color: #00173f;
+        padding: 8px 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+        border-radius: 50px;
+        border: 1.8px solid #00173f;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: bold;  
+    }
+
+    .btn-cancel {
+        color: #b12a5b;
+        padding: 5px 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+        border-radius: 50px;
+        border: 1.8px solid #b12a5b;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: bold
+    }
+
+    .btn-cancel:hover {
+        animation: opacity 3s;
+        opacity: 60%;
+        
+    }
+    
+    .btn:hover {
+        animation: opacity 3s;
+        opacity: 50%;
+    }
+    
+    .btn-cadastrar:hover {
+        animation: opacity 3s;
+        opacity: 60%;
+        
+    }
+
+    input {
+        background-color: #f8f8f8;
+        max-width: 200px;
+        text-align: center;
+        justify-content: center;
+    }
+
+}

@@ -48,7 +48,7 @@
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#3366cc;
+  color:#f8f8f8;
   text-decoration:none;
 }
 .footer-links.inline li
@@ -128,7 +128,7 @@
 .social-icons a:active,.social-icons a:focus,.social-icons a:hover
 {
   color:#fff;
-  background-color:#29aafe
+  background-color:#f8f8f8
 }
 .social-icons.size-sm a
 {
@@ -137,22 +137,11 @@
   width:34px;
   font-size:14px
 }
-.social-icons a.facebook:hover
-{
-  background-color:#3b5998
-}
-.social-icons a.twitter:hover
-{
-  background-color:#00aced
-}
 .social-icons a.linkedin:hover
 {
   background-color:#007bb6
 }
-.social-icons a.dribbble:hover
-{
-  background-color:#ea4c89
-}
+
 @media (max-width:767px)
 {
   .social-icons li.title

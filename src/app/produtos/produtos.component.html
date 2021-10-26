@@ -144,9 +144,9 @@
 
     <div class="d-flex justify-content-center row mt-3 mb-5 btn-responsivo">
         <div class="col-md-12 justify-content-center row ">
-            <button class="btn mr-5" data-toggle="modal" data-target="#exampleModal">Novo Produto</button>
-            <button class="btn mr-5" data-toggle="modal" routerLink='/categoria'>Nova Categoria</button>
-            <button class="btn" data-toggle="modal" routerLink='/produto'>Atualizar Produtos</button>
+            <button class="btn mb-3 mr-5" data-toggle="modal" data-target="#exampleModal">Novo Produto</button>
+            <button class="btn mb-3 mr-5" data-toggle="modal" routerLink='/categoria'>Nova Categoria</button>
+            <button class="btn mb-3" data-toggle="modal" routerLink='/produto'>Atualizar Produtos</button>
         </div>
     </div>
 
@@ -198,8 +198,7 @@
                                 data-dismiss="modal" routerLink='/categoria'><strong> uma
                                     nova</strong></a>:</label>
 
-                        <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria'
-                            (change)='findByIdCategoria()'>
+                        <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
                             <option *ngFor='let item of listaCategoria' value="{{item.id}}"><strong>
                                     {{item.tipo}} | {{item.classificacao}}</strong></option>
                         </select>
