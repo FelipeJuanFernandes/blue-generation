@@ -92,3 +92,15 @@ nav{
       background: #ecd6a7;
     }
   }
+
+  @media screen and (max-width: 480px) {
+
+
+
+    .logo{
+      width: 200px;
+      transform: scale(1);
+      transition: .3s ease-in-out;
+    }
+
+  }
