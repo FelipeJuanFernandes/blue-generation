@@ -11,51 +11,6 @@ html, body{
   opacity: 60%
 }
 
-.logo{
-  width: 300px;
-  transform: scale(1);
-  transition: .3s ease-in-out;
-}
-
-
-
-.carousel-caption{
-  margin-bottom: 220px;
-}
-
-.carousel-caption h5{
-  font-family: 'raleway',sans-serif;
-  font-size: 45px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 25px;
-  /* color: #262626; */
-  color: #3c2310;
-  opacity: 80%
-}
-
-.carousel-caption p{
-  width: 60%;
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.9;
-  letter-spacing: 2px;
-  color: #3c2310;
-}
-
-.carousel-caption a{
-  text-transform: uppercase;
-  background: #cca97c;
-  padding: 10px 30px;
-  display: inline-block;
-  color: #fff;
-  margin-top: 15px;
-}
-
-.carousel-caption a:hover{
-    background-color: #cca97c;
-    border: 2px solid #cca97c;
-  }
 
 /* Botões */
 
@@ -200,6 +155,7 @@ html, body{
 
 
 /* Paralax bonus */
+
 .pimg2{
   position:relative;
   /* opacity:0.70; */
@@ -235,7 +191,7 @@ html, body{
   padding:20px;
 }
 
- .ptext .border.trans{
+.ptext .border.trans{
   background-color:transparent;
 } */
 
@@ -278,15 +234,53 @@ html, body{
 @media screen and (min-width: 1024px) {
 
   .carousel-item{
-    height: 100vh;
     min-height: 300px;
+    max-height: 700px;
     background: no-repeat center center scroll;
     background-size: cover;
   }
 
   .video{
-      width: 100%;
+    width: 100%;
   }
+
+  .carousel-caption{
+    margin-bottom: 220px;
+  }
+  
+  .carousel-caption h5{
+    font-family: 'raleway',sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    /* color: #262626; */
+    color: #3c2310;
+    opacity: 80%
+  }
+  
+  .carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 2px;
+    color: #3c2310;
+  }
+  
+  .carousel-caption a{
+    text-transform: uppercase;
+    background: #cca97c;
+    padding: 10px 30px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 15px;
+  }
+  
+  .carousel-caption a:hover{
+      background-color: #cca97c;
+      border: 2px solid #cca97c;
+    }
 
 }
 
@@ -302,9 +296,47 @@ html, body{
     width: 100%;
   }
 
+  .carousel-caption{
+    margin-bottom: 220px;
+  }
+  
+  .carousel-caption h5{
+    font-family: 'raleway',sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    /* color: #262626; */
+    color: #3c2310;
+    opacity: 80%
+  }
+  
+  .carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 2px;
+    color: #3c2310;
+  }
+  
+  .carousel-caption a{
+    text-transform: uppercase;
+    background: #cca97c;
+    padding: 10px 30px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 15px;
+  }
+  
+  .carousel-caption a:hover{
+      background-color: #cca97c;
+      border: 2px solid #cca97c;
+    }
+
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
 
   .carousel-item{
     /* height: 100vh; */
@@ -317,18 +349,71 @@ html, body{
     width: 100%;
   }
 
+  .carousel-caption{
+    margin-bottom: 100px;
+  }
+  
+  .carousel-caption h5{
+    font-family: 'raleway',sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* color: #262626; */
+    color: #3c2310;
+    opacity: 80%
+  }
+  
+  .carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 2px;
+    color: #3c2310;
+  }
+  
+  .carousel-caption a{
+    text-transform: uppercase;
+    background: #cca97c;
+    padding: 10px 30px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 15px;
+  }
+  
+  .carousel-caption a:hover{
+      background-color: #cca97c;
+      border: 2px solid #cca97c;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
 
   .carousel-item{
-    min-height: 300px;
+    min-height: 200px;
     background: no-repeat center center scroll;
     background-size: cover;
+    margin-bottom: 0;
   }
 
   .video{
     width: 100%;
+  }
+
+  .title-dest{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color:#a7abaf82 ;
+    -webkit-background-clip: text;
+    background-image: url(https://stoleshnica-fasad.ru/wp-content/uploads/2016/03/Panel-iz-stekla-dlya-kukhni-panoramy-prirody-art.-0003-600x190.jpg);
+    animation: water 15s infinite;
+  }
+  
+  @keyframes water {
+    from {background-position: left 0 top 0;}
+    to {background-position: left 1000px top 0;}
   }
 
 }
